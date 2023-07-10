@@ -1,0 +1,36 @@
+@api = http://localhost:3000/api
+GET {{api}}/denuncia
+###
+
+GET {{api}}/comentarios/ac0c55a4-1f7f-425e-8
+###
+POST {{api}}/denuncia
+content-type:application/json
+
+{
+    "empresa":"coppel",
+    "pais":"mexico",
+    "estado":"cdmx",
+    "numeroCentro":"123",
+    "nombreCompleto":"josue",
+    "correo":"a20170094@utem.edu.mx",
+    "telefono":"3141286432",
+    "descripcion":"hola",
+    "fecha":"2023-07-08"
+}
+###
+POST {{api}}/comentar
+content-type:application/json
+
+{
+    "idDenuncia":1,
+    "comentario":"hola"
+}
+###
+POST {{api}}/user/login
+content-type:application/json
+
+{
+    "correo":"a20170094@utem.edu.m",
+    "password":123456789
+}
